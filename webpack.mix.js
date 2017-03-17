@@ -14,7 +14,7 @@ const { mix } = require('laravel-mix');
 const ASSETS = {
         js: {
             ROOT: 'resources/assets/js/',
-            DEFAULT_TARGET: 'public/js',
+            DEFAULT_TARGET: 'public/js/',
             assets: [
                 { 
                     src: 'app.js' 
@@ -32,7 +32,7 @@ const ASSETS = {
         },
         sass: {
             ROOT: 'resources/assets/sass/',
-            DEFAULT_TARGET: 'public/css',
+            DEFAULT_TARGET: 'public/css/',
             assets: [
                 { 
                     src: 'app.scss' 
