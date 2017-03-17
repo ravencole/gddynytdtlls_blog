@@ -49,7 +49,7 @@
     ])
     <script type="text/javascript">
         document.getElementById('deletePostForm').addEventListener('submit', function(e) {
-            if (!confirm("Are you sure you want to delete this \"{{ $post->title }}\"?")) {
+            if (!confirm("Are you sure you want to delete \"{{ $post->title }}\"?")) {
                 e.preventDefault()
             }
         })
