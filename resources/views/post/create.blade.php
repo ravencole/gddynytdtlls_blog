@@ -9,7 +9,7 @@
     <header class="intro-header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
                     <div class="site-heading">
                         <h1>~ Create Post ~</h1>
                     </div>

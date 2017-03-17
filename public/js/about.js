@@ -63,31 +63,30 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 11:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 1:
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(3);
+Array.prototype.slice.call(document.querySelectorAll('#about--main a')).map(function (elm) {
+    elm.setAttribute('target', '_blank');
+    elm.setAttribute('href', 'https://www.google.com/#q=' + elm.innerText.split(' ').join('+') + '&*');
+});
 
+Array.prototype.slice.call(document.querySelectorAll('[data-id="about--skills"] a')).map(function (elm) {
+    elm.setAttribute('href', '/tag/' + elm.innerHTML.toLowerCase());
+});
 
 /***/ }),
 
-/***/ 3:
-/***/ (function(module, exports) {
+/***/ 9:
+/***/ (function(module, exports, __webpack_require__) {
 
-tinymce.init({
-    selector: '#editor',
-    plugins: 'link image codesample',
-    toolbar: ['bold italic underline strikethrough', 'alignleft aligncenter alignright', 'formatselect', 'bullist numlist', 'blockquote codesample', 'link image'].join(' | '),
-    codesample_languages: [{ text: 'HTML/XML', value: 'markup' }, { text: 'JavaScript', value: 'javascript' }, { text: 'CSS', value: 'css' }, { text: 'PHP', value: 'php' }, { text: 'Ruby', value: 'ruby' }, { text: 'Python', value: 'python' }, { text: 'Java', value: 'java' }, { text: 'C', value: 'c' }, { text: 'C#', value: 'csharp' }, { text: 'C++', value: 'cpp' }, { text: 'Haskell', value: 'haskell' }],
-    image_caption: true
-});
+module.exports = __webpack_require__(1);
 
-console.log('people');
 
 /***/ })
 

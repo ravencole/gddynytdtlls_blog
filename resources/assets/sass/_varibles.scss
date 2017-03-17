@@ -1,0 +1,16 @@
+// Colors
+$black: #111111;
+$black--light: rgb(120,120,120);
+
+$white: white;
+$white--darken: rgb(220,220,220);
+
+$green: lighten(lawngreen, 15);
+
+$blue: deepskyblue;
+
+$red: red;
+$red--light: lighten($red, 30);
+
+// Site Theme
+$body-bg-color: $white;

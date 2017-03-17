@@ -1,0 +1,16 @@
+@mixin SansSerif() {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@mixin flex($a: center, $j: center, $d: row) {
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+    flex-direction: $d;
+}
+
+@mixin pseudo($d: block, $p: absolute, $c: ''){
+    content: $c;
+    display: $d;
+    position: $p;
+}

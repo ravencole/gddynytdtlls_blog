@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Presenters\TagPresenter;
 
 class Tag extends Model
 {
@@ -13,7 +14,13 @@ class Tag extends Model
         return $this->belongsToMany(Post::class);
     }
 
-    public function path() {
+    public function path() 
+    {
         return "/tag/".$this->name;
+    }
+
+    public function present()
+    {
+        return new TagPresenter($this);
     }
 }

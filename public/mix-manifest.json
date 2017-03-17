@@ -1,5 +1,7 @@
 {
-  "/js/post-editor.js": "/js/post-editor.js",
   "/js/app.js": "/js/app.js",
-  "/css/app.css": "/css/app.css"
+  "/css/app.css": "/css/app.css",
+  "/js/tag-search.js": "/js/tag-search.js",
+  "/js/post-editor.js": "/js/post-editor.js",
+  "/js/about.js": "/js/about.js"
 }

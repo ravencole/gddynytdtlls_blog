@@ -1,14 +1,13 @@
 tinymce.init({
     selector: '#editor',
-    plugins: 'link code image codesample',
+    plugins: 'link image codesample',
     toolbar: [
         'bold italic underline strikethrough',
-        'alignleft aligncenter alignright alignjustify',
+        'alignleft aligncenter alignright',
         'formatselect',
         'bullist numlist',
-        'blockquote code emoticons',
-        'link image',
-        'fullscreen'
+        'blockquote codesample',
+        'link image'
     ].join(' | '),
     codesample_languages: [
         {text: 'HTML/XML', value: 'markup'},
@@ -25,3 +24,5 @@ tinymce.init({
     ],
     image_caption: true
 });
+
+console.log('people')

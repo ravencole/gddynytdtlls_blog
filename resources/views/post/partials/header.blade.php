@@ -4,6 +4,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <h1>{{ $post->title }}</h1>
+                    <h4>{{ $post->present()->preview }}</h4>
                     <p class="post-meta">Published {{ $post->created_at->diffForHumans() }}</p>
                     <p class="post-meta">
                         @foreach($post->tags as $tag)

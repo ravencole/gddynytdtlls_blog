@@ -11,6 +11,42 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .js('resources/assets/js/post-editor.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+const ASSETS = {
+        js: {
+            ROOT: 'resources/assets/js/',
+            DEFAULT_TARGET: 'public/js',
+            assets: [
+                { 
+                    src: 'app.js' 
+                },
+                { 
+                    src: 'post-editor.js' 
+                },
+                { 
+                    src: 'about.js' 
+                },
+                {
+                    src: 'tag-search.js'
+                }
+            ]
+        },
+        sass: {
+            ROOT: 'resources/assets/sass/',
+            DEFAULT_TARGET: 'public/css',
+            assets: [
+                { 
+                    src: 'app.scss' 
+                }
+            ]
+        }
+    }
+
+
+Object.keys(ASSETS).map(assetType => {
+    ASSETS[assetType].assets.map(a => {
+        mix[assetType](
+            ASSETS[assetType].ROOT + a.src,
+            a.target ? a.target : ASSETS[assetType].DEFAULT_TARGET
+        )
+    })
+})

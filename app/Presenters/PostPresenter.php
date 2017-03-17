@@ -27,10 +27,9 @@ class PostPresenter extends Presenter
 
     public function preview()
     {
-        if ($this->post->post_preview) {
-            return $this->post->post_preview;
-        }
-        return strip_tags(substr($this->post->body, 0, 200)) . '...';
+        return $this->post->post_preview ?
+               $this->post->post_preview :
+               strip_tags(substr($this->post->body, 0, 200)) . '...';
     }
 
     public function tagString()

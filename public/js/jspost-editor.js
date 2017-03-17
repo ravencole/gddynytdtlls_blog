@@ -63,31 +63,16 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 11:
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(3);
+(function webpackMissingModule() { throw new Error("Cannot find module \"/Users/raven/Projects/AOCSite/resources/assets/jspost-editor.js\""); }());
 
-
-/***/ }),
-
-/***/ 3:
-/***/ (function(module, exports) {
-
-tinymce.init({
-    selector: '#editor',
-    plugins: 'link image codesample',
-    toolbar: ['bold italic underline strikethrough', 'alignleft aligncenter alignright', 'formatselect', 'bullist numlist', 'blockquote codesample', 'link image'].join(' | '),
-    codesample_languages: [{ text: 'HTML/XML', value: 'markup' }, { text: 'JavaScript', value: 'javascript' }, { text: 'CSS', value: 'css' }, { text: 'PHP', value: 'php' }, { text: 'Ruby', value: 'ruby' }, { text: 'Python', value: 'python' }, { text: 'Java', value: 'java' }, { text: 'C', value: 'c' }, { text: 'C#', value: 'csharp' }, { text: 'C++', value: 'cpp' }, { text: 'Haskell', value: 'haskell' }],
-    image_caption: true
-});
-
-console.log('people');
 
 /***/ })
 
