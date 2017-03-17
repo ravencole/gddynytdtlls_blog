@@ -18,6 +18,14 @@
                 <li>
                     <a href="/contact">Contact</a>
                 </li>
+                @if(Auth::check())
+                    <li>
+                        <a href="/post/create">Post</a>
+                    </li>
+                    <li>
+                        <a href="/logout">Logout</a>
+                    </li>
+                @endif
             </ul>
         </div>
         <!-- /.navbar-collapse -->

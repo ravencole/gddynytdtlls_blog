@@ -47,7 +47,7 @@ input {
   & label {
     font-size: 30px;
   }
-  & input[type="text"] {
+  & input[type="text"], & input[type="password"] {
     border-radius: 0;
     border-top: 0px solid black;
     border-left: 0px solid black;
@@ -165,4 +165,15 @@ a.site-link {
 }
 .status-code {
   color: $red;
+}
+.error-red {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: $red;
+  color: $white;
+}
+
+button:active, button:focus {
+  outline: 0;
 }

@@ -31,7 +31,11 @@
         <hr>
         <hr>
         <hr>
-        <form method="POST" action="/post/{{ $post->id }}">
+        <form 
+            method="POST" 
+            action="/post/{{ $post->id }}" 
+            id="deletePostForm">
+
             {{ csrf_field() }}
             {{ method_field('DELETE') }}
             <div class="form-group">
@@ -43,5 +47,12 @@
     @include('layouts.scripts',[
         'additionalScripts' => ['post-editor.js']
     ])
+    <script type="text/javascript">
+        document.getElementById('deletePostForm').addEventListener('submit', function(e) {
+            if (!confirm("Are you sure you want to delete this \"{{ $post->title }}\"?")) {
+                e.preventDefault()
+            }
+        })
+    </script>
 </body>
 </html>

@@ -24,5 +24,3 @@ tinymce.init({
     ],
     image_caption: true
 });
-
-console.log('people')

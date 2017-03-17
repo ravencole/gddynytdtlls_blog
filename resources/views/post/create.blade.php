@@ -18,6 +18,9 @@
         </div>
     </header>
     <div class="container editor-container">
+        @foreach($errors->all() as $error)
+            <h3 class="error-red">{{ $error }}</h3>
+        @endforeach
         @include('post.partials.editor',[
             "editorDetails" => [
                 "method" => "POST",

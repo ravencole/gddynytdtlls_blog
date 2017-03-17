@@ -5,10 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Post;
-use App\Tag;
+use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->only([
+            'create',
+            'edit'
+        ]);
+    }
+
     public function create()
     {
         return view('post.create');
@@ -24,16 +32,16 @@ class PostController extends Controller
         return view('post.show',compact('post'));
     }
 
-    public function update(Post $post, Request $request)
+    public function update(Post $post, PostRequest $request)
     {
-        $post = $this->persist($post, $request);
+        $post = $request->persist($post, $request);
 
         return redirect('post/'.$post->id);
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
-        $post = $this->persist(new Post(), $request);
+        $post = $request->persist(new Post(), $request);
 
         return redirect('post/'.$post->id);
     }
@@ -43,38 +51,5 @@ class PostController extends Controller
         Post::destroy($post->id);
 
         return redirect('/');
-    }
-
-    private function persist(Post $post, Request $request)
-    {
-        $post->title = $request->title;
-
-        $post->body = $request->body;
-
-        if ($request->post_preview) {
-            $post->post_preview = $request->post_preview;
-        }
-
-        if ($request->file('header_image')) {
-            $post->header_img = $request->file('header_image')->store('public/images');
-        }
-
-        $post->save();
-
-        $this->attachTags($post, $request);
-
-        return $post;
-    }
-
-    private function attachTags(Post $post, Request $request)
-    {
-        $post->tags()->detach();
-
-        if ($request->tags) {
-            foreach(explode(",",$request->tags) as $tag) {
-                $post->tags()
-                     ->attach(Tag::firstOrCreate(['name' => trim($tag)])->id);
-            }
-        }
     }
 }

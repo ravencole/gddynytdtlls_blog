@@ -10,7 +10,9 @@
                     <hr>
                 </div>
             </div>
-            <a href="/post/{{$post->id}}/edit" class="btn-site col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">Edit this post</a>
+            @if(Auth::check())
+                <a href="/post/{{$post->id}}/edit" class="btn-site col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">Edit this post</a>
+            @endif
         </div>
     </article>
 @endsection

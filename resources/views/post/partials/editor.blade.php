@@ -8,6 +8,7 @@
             name="title" 
             placeholder="watcha title..." 
             value="{{ isset($editorDetails["title"]) ? $editorDetails["title"] : "" }}"
+            required
             />
     </div>
     <div class="form-group">
@@ -30,7 +31,7 @@
     </div>
     <div class="form-group">
         <label for="body">Body</label>
-        <textarea id="editor" class="form-control" name="body">
+        <textarea id="editor" class="form-control" name="body" required>
             {{ isset($editorDetails["body"]) ? $editorDetails["body"] : "" }}
         </textarea>
     </div>
