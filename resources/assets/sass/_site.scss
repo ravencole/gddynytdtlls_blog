@@ -177,3 +177,49 @@ a.site-link {
 button:active, button:focus {
   outline: 0;
 }
+
+@media only screen and (max-width: 767px) {
+  .navbar-custom {
+    background: white;
+    border-bottom: 1px solid black;
+  }
+  .navbar-custom .navbar-brand {
+    color: $black;
+    // padding: 20px;
+  }
+  .navbar-custom .navbar-brand:hover,
+  .navbar-custom .navbar-brand:focus {
+    color: $black;
+  }
+  .navbar-custom .nav li:not(:last-child) {
+    border-bottom: 1px solid $black;
+  }
+  .navbar-custom .nav li a {
+    color: $black;
+    padding: 20px;
+  }
+  .navbar-custom .nav li a:hover,
+  .navbar-custom .nav li a:focus {
+    color: $black;
+  }
+  .navbar-custom .nav li ul.dropdown-menu a {
+    color: $black;
+  }
+  .navbar-custom .nav li ul.dropdown-menu a:hover,
+  .navbar-custom .nav li ul.dropdown-menu a:focus {
+    color: $black;
+  }
+  .navbar-custom .navbar-header .navbar-toggle {
+    color: $black;
+    background-color: $white;
+    border-radius: 0px;
+    border-color: $black;
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: $black;
+  }
+
+  .navbar-fixed-top {
+    transition: all 500ms ease;
+  }
+}
