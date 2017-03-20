@@ -39,3 +39,7 @@
         <button type="submit" class="btn-editor btn-submit">Submit</button>
     </div>
 </form>
+
+<div id="mediaModal" class="media-modal--container">
+    
+</div>

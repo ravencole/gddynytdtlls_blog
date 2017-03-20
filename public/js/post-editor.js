@@ -63,12 +63,12 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 11:
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(3);
@@ -81,8 +81,8 @@ module.exports = __webpack_require__(3);
 
 tinymce.init({
     selector: '#editor',
-    plugins: 'link image codesample',
-    toolbar: ['bold italic underline strikethrough', 'alignleft aligncenter alignright', 'formatselect', 'bullist numlist', 'blockquote codesample', 'link image'].join(' | '),
+    plugins: 'link image codesample code',
+    toolbar: ['bold italic underline strikethrough', 'alignleft aligncenter alignright', 'formatselect', 'bullist numlist', 'blockquote codesample code', 'link image'].join(' | '),
     codesample_languages: [{ text: 'HTML/XML', value: 'markup' }, { text: 'JavaScript', value: 'javascript' }, { text: 'CSS', value: 'css' }, { text: 'PHP', value: 'php' }, { text: 'Ruby', value: 'ruby' }, { text: 'Python', value: 'python' }, { text: 'Java', value: 'java' }, { text: 'C', value: 'c' }, { text: 'C#', value: 'csharp' }, { text: 'C++', value: 'cpp' }, { text: 'Haskell', value: 'haskell' }],
     image_caption: true
 });

@@ -1,12 +1,12 @@
 tinymce.init({
     selector: '#editor',
-    plugins: 'link image codesample',
+    plugins: 'link image codesample code',
     toolbar: [
         'bold italic underline strikethrough',
         'alignleft aligncenter alignright',
         'formatselect',
         'bullist numlist',
-        'blockquote codesample',
+        'blockquote codesample code',
         'link image'
     ].join(' | '),
     codesample_languages: [
@@ -23,4 +23,4 @@ tinymce.init({
         {text: 'Haskell', value: 'haskell'}
     ],
     image_caption: true
-});
+})

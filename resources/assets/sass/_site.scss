@@ -223,3 +223,20 @@ button:active, button:focus {
     transition: all 500ms ease;
   }
 }
+
+.btn-media {
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mediaModal--container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $modal--overlay;
+  display: none;
+}

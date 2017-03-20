@@ -3,6 +3,12 @@
 * based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
 * license: MIT; http://moox.mit-license.org/
 */
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700');
+
+pre.code--general {
+    background-color: white;
+    color: black;
+}
 code[class*="language-"],
 pre[class*="language-"] {
     -moz-tab-size: 2;
@@ -15,19 +21,20 @@ pre[class*="language-"] {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: normal;
-    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: "Fira Mono", Monaco, "Courier New", monospace;
     font-size: 14px;
-    color: #76d9e6;
+    color: black;
     text-shadow: none;
+    overflow: scroll;
 }
 pre[class*="language-"],
 :not(pre)>code[class*="language-"] {
-    background: #2a2a2a;
+    background: white;
 }
 pre[class*="language-"] {
     padding: 15px;
-    border-radius: 4px;
-    border: 1px solid #e1e1e8;
+    border-radius: 0px;
+    // border: 1px solid rgb(140,140,140);
     overflow: auto;
 }
 
@@ -52,41 +59,51 @@ pre[class*="language-"] code {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #6f705e;
+    color: grey;
+    font-style: italic;
 }
-.token.operator,
+.token.operator {
+    color: black;
+    font-weight: bold;
+}
 .token.boolean,
 .token.number {
-    color: #a77afe;
+    color: black;
+    font-weight: bold;
 }
 .token.attr-name,
 .token.string {
-    color: #e6d06c;
+    background-color: black;
+    color: white;
+    padding: 0 2px;
+    border-radius: 3px;
 }
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-    color: #e6d06c;
+    color: red;
 }
 .token.selector,
 .token.inserted {
-    color: #a6e22d;
+    color: red;
 }
 .token.atrule,
 .token.attr-value,
 .token.keyword,
 .token.important,
 .token.deleted {
-    color: #ef3b7d;
+    color: black;
+    font-weight: bold;
+    // font-style: italic;
 }
 .token.regex,
 .token.statement {
-    color: #76d9e6;
+    color: black;
 }
 .token.placeholder,
 .token.variable {
-    color: #fff;
+    color: black;
 }
 .token.important,
 .token.statement,
@@ -94,7 +111,7 @@ pre[class*="language-"] code {
     font-weight: bold;
 }
 .token.punctuation {
-    color: #bebec5;
+    color: black;
 }
 .token.entity {
     cursor: help;
