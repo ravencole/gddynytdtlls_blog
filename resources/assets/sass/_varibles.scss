@@ -1,18 +1,22 @@
 // Colors
-$black: #111111;
+$black: black;
 $black--light: rgb(120,120,120);
 
 $white: white;
-$white--darken: rgb(220,220,220);
+$white--darken: rgb(130,130,130);
 
-$green: lighten(lawngreen, 15);
+$green: #00FF66;
 
-$blue: deepskyblue;
+$blue: #00CCFF;
+
+$purple: #FF00FF;
+
+$yellow: yellow;
 
 $red: red;
 $red--light: lighten($red, 30);
 
 // Site Theme
-$body-bg-color: $white;
+$body-bg-color: $black;
 
 $modal--overlay: rgba(0,0,0,0.5);

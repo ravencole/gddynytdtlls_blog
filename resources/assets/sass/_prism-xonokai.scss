@@ -3,14 +3,13 @@
 * based on: https://github.com/MoOx/sass-prism-theme-base by Maxime Thirouin ~ MoOx --> http://moox.fr/ , which is Loosely based on Monokai textmate theme by http://www.monokai.nl/
 * license: MIT; http://moox.mit-license.org/
 */
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700');
-
 pre.code--general {
-    background-color: white;
-    color: black;
+    background-color: $black;
+    color: $white;
 }
 code[class*="language-"],
 pre[class*="language-"] {
+    @include MonoSpace();
     -moz-tab-size: 2;
     -o-tab-size: 2;
     tab-size: 2;
@@ -21,15 +20,14 @@ pre[class*="language-"] {
     white-space: pre;
     white-space: pre-wrap;
     word-wrap: normal;
-    font-family: "Fira Mono", Monaco, "Courier New", monospace;
-    font-size: 14px;
-    color: black;
+    font-size: 15px;
+    color: white;
     text-shadow: none;
     overflow: scroll;
 }
 pre[class*="language-"],
 :not(pre)>code[class*="language-"] {
-    background: white;
+    background: $black;
 }
 pre[class*="language-"] {
     padding: 15px;
@@ -59,22 +57,22 @@ pre[class*="language-"] code {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: grey;
+    color: $white--darken;
     font-style: italic;
 }
 .token.operator {
-    color: black;
-    font-weight: bold;
+    color: $purple;
+    // font-weight: bold;
 }
 .token.boolean,
 .token.number {
-    color: black;
+    color: $blue;
     font-weight: bold;
 }
 .token.attr-name,
 .token.string {
-    background-color: black;
-    color: white;
+    background-color: $yellow;
+    color: $black;
     padding: 0 2px;
     border-radius: 3px;
 }
@@ -93,17 +91,18 @@ pre[class*="language-"] code {
 .token.keyword,
 .token.important,
 .token.deleted {
-    color: black;
+    color: $purple;
     font-weight: bold;
     // font-style: italic;
 }
 .token.regex,
 .token.statement {
-    color: black;
+    color: $purple;
 }
 .token.placeholder,
-.token.variable {
-    color: black;
+.token.variable,
+.token.function {
+    color: $blue;
 }
 .token.important,
 .token.statement,
@@ -111,7 +110,7 @@ pre[class*="language-"] code {
     font-weight: bold;
 }
 .token.punctuation {
-    color: black;
+    color: $green;
 }
 .token.entity {
     cursor: help;

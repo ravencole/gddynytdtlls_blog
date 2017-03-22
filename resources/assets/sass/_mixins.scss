@@ -2,6 +2,10 @@
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@mixin MonoSpace() {
+    font-family: "Inconsolata", Monaco, "Courier New", monospace;
+}
+
 @mixin flex($a: center, $j: center, $d: row) {
     display: flex;
     align-items: $a;
