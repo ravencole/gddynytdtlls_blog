@@ -10,6 +10,11 @@ use App\Http\SessionErrors\LoginSessionError;
 
 class LoginController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest')->only(['index']);
+    }
+
     public function index()
     {
         return view('session.login');
@@ -17,14 +22,11 @@ class LoginController extends Controller
 
     public function store(LoginRequest $request)
     {
-        if (Auth::attempt([
-            'email' => $request->email, 
-            'password' => $request->password
-        ])) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect('/');
         }
 
-        $errors = LoginSessionError::handle($request,[
+        $errors = LoginSessionError::handle($request, [
             'wrong creds' => 'No, no. Not even close.'
         ]);
 
@@ -33,8 +35,11 @@ class LoginController extends Controller
 
     public function destroy()
     {
-        Auth::logout();
+        if(!Auth::check()) {
+            return view('errors.403')->withStatus(302);
+        }
 
+        Auth::logout();
         return back();
     }
 }

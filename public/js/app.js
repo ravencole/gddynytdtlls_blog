@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 16);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10300,10 +10300,10 @@ return jQuery;
 
 window.$ = window.jQuery = __webpack_require__(0);
 
-__webpack_require__(7);
-__webpack_require__(8);
+__webpack_require__(12);
+__webpack_require__(13);
 
-__webpack_require__(6);
+__webpack_require__(11);
 
 console.log('Bootstrap theme created by BlackrockDigital');
 console.log('https://github.com/BlackrockDigital/startbootstrap-clean-blog');
@@ -10311,13 +10311,38 @@ console.log('https://github.com/BlackrockDigital/startbootstrap-clean-blog');
 /***/ }),
 /* 3 */,
 /* 4 */,
-/* 5 */
+/* 5 */,
+/* 6 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 6 */
+/* 7 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports) {
 
 function NavAnimation() {
@@ -10368,7 +10393,7 @@ window.addEventListener('resize', function (_) {
 });
 
 /***/ }),
-/* 7 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(jQuery) {/*!
@@ -12752,7 +12777,7 @@ if (typeof jQuery === 'undefined') {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 8 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -13551,10 +13576,10 @@ Prism.languages.js = Prism.languages.javascript;
 
 })();
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
 
 /***/ }),
-/* 9 */
+/* 14 */
 /***/ (function(module, exports) {
 
 var g;
@@ -13581,12 +13606,16 @@ module.exports = g;
 
 
 /***/ }),
-/* 10 */,
-/* 11 */
+/* 15 */,
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(2);
-module.exports = __webpack_require__(5);
+__webpack_require__(9);
+__webpack_require__(10);
+__webpack_require__(6);
+__webpack_require__(7);
+module.exports = __webpack_require__(8);
 
 
 /***/ })

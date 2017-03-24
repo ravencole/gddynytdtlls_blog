@@ -1,95 +1,21 @@
-.row h2,
-.row h3 {
-  color: $yellow;
-} 
-
-.intro-header .site-heading {
-  color: $yellow;
-  & h1 {
-    text-shadow: 6px 6px 0 $green;
-  }
-}
-
-.row div,
-.row p,
-.row div,
-.row ul,
-.post-preview > a > .post-subtitle,
-footer .copyright {
-  color: $white;
-}
-
-.intro-header .post-heading h4 {
-  color: $purple;
-}
-
-.intro-header .post-heading h1,
-.post-preview > a > .post-title {
-  color: $purple;
-  text-shadow: 2px 2px 0 $blue;
-}
-
-a,
-.row a,
-.navbar-custom .navbar-brand,
-.navbar-custom .nav li a,
-.post-meta > a {
-  color: $blue;
-}
-
-p.post-meta {
-  color: $green;
-}
-
-.site-heading > hr.small, hr {
-  border-color: $yellow;
-}
 .pager {
   padding: 5px 0;
 }
 .pager .next > a {
-  background-color: $black;
-  color: $white;
-  border: 1px solid white;
   outline: 0;
   box-shadow: 0 0 0 0 black;
   margin: 0 auto;
 }
-.pager li > a:hover {
-  border: 0px solid transparent;
-  background-color: $white--darken;
-  color: $black;
-}
 .pager-container {
   margin-top: 0;
-}
-.fa-inverse {
-  color: $black;
-}
-.fa-circle {
-  color: $white;
-}
-
-.fa-stack {
-  &:hover {
-    color: $blue;
-  }
-}
-input {
-  color: black;
 }
 .btn-site {
   @include SansSerif();
   font-size: 20px;
   padding: 10px 0;
   text-align: center;
-  border: 1px solid black;
   font-weight: 800;
   box-sizing: border-box;
-  background-color: $white;
-  &:hover {
-    color: $blue;
-  }
 }
 .editor-container {
   @include SansSerif();
@@ -104,9 +30,6 @@ input {
     border-bottom: 1px solid black;
     width: 100%;
     outline: 0;
-    &::placeholder {
-      color: $white--darken;
-    }
   }
   & textarea {
     height: 400px;
@@ -118,22 +41,8 @@ input {
   font-weight: 800;
   padding: 5px 0;
   font-size: 30px;
-  border: 1px solid black;
-  background-color: $white;
   &:hover {
     text-decoration: underline;
-  }
-}
-.btn-submit {
-  &:hover {
-    color: $green;
-    border: 1px solid $green;
-  }
-}
-.btn-delete {
-  &:hover {
-    color: $red;
-    border: 1px solid $red;
   }
 }
 .form-group {
@@ -155,22 +64,14 @@ pre {
     margin: 80px 0;
   }
   & a {
-    color: $blue;
     text-decoration: underline;
-    &:hover {
-      color: $blue;
-    }
   }
 }
 .tag-error {
   @include flex(center, center, column);
   width: 100%;
   & a {
-    color: $blue;
     text-decoration: underline;
-    &:hover {
-      color: $blue;
-    }
   }
   & input {
     @include SansSerif();
@@ -183,44 +84,25 @@ pre {
     border-bottom: 1px solid black;
     width: 100%;
     outline: 0;
-    &::placeholder {
-      color: $white--darken;
-    }
   }
 }
 .tags-container {
   & a {
     @include SansSerif();
-    color: $blue;
     font-size: 30px;
-    &:hover {
-      color: $blue;
-      text-decoration: underline;
-    }
   }
 }
 a.site-link {
   @include SansSerif();
-  color: $blue;
-  &:hover {
-    color: $blue;
-    text-decoration: underline;
-  }
 }
 .status-message {
   width: 100%;
   padding: 10px;
-  border: 1px solid black;
-}
-.status-code {
-  color: $red;
 }
 .error-red {
   width: 100%;
   padding: 10px;
   text-align: center;
-  background-color: $red;
-  color: $white;
 }
 
 button:active, button:focus {
@@ -228,46 +110,12 @@ button:active, button:focus {
 }
 
 @media only screen and (max-width: 767px) {
-  .navbar-custom {
-    background: white;
-    border-bottom: 1px solid black;
-  }
-  .navbar-custom .navbar-brand {
-    color: $black;
-    // padding: 20px;
-  }
-  .navbar-custom .navbar-brand:hover,
-  .navbar-custom .navbar-brand:focus {
-    color: $black;
-  }
-  .navbar-custom .nav li:not(:last-child) {
-    border-bottom: 1px solid $black;
-  }
   .navbar-custom .nav li a {
-    color: $black;
     padding: 20px;
   }
-  .navbar-custom .nav li a:hover,
-  .navbar-custom .nav li a:focus {
-    color: $black;
-  }
-  .navbar-custom .nav li ul.dropdown-menu a {
-    color: $black;
-  }
-  .navbar-custom .nav li ul.dropdown-menu a:hover,
-  .navbar-custom .nav li ul.dropdown-menu a:focus {
-    color: $black;
-  }
   .navbar-custom .navbar-header .navbar-toggle {
-    color: $black;
-    background-color: $white;
     border-radius: 0px;
-    border-color: $black;
   }
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: $black;
-  }
-
   .navbar-fixed-top {
     transition: all 500ms ease;
   }
@@ -278,14 +126,4 @@ button:active, button:focus {
   &:hover {
     cursor: pointer;
   }
-}
-
-.mediaModal--container {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $modal--overlay;
-  display: none;
 }

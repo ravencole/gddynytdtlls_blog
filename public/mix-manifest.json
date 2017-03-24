@@ -1,7 +1,12 @@
 {
   "/js/app.js": "/js/app.js",
   "/css/app.css": "/css/app.css",
+  "/css/theme-dark.css": "/css/theme-dark.css",
+  "/css/theme-light.css": "/css/theme-light.css",
+  "/css/theme-black-on-white.css": "/css/theme-black-on-white.css",
+  "/css/theme-white-on-black.css": "/css/theme-white-on-black.css",
   "/js/tag-search.js": "/js/tag-search.js",
   "/js/post-editor.js": "/js/post-editor.js",
+  "/js/jsfuck-syntax-highlighter.js": "/js/jsfuck-syntax-highlighter.js",
   "/js/about.js": "/js/about.js"
 }

@@ -22,4 +22,4 @@ class TagsController extends Controller
             'requestedTagName' => $request->name
         ]);
     }
-}
+} 

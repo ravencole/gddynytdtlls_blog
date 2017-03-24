@@ -1,0 +1,451 @@
+@import "mixins";
+
+$black: black;
+$black--light: rgb(120,120,120);
+
+$white: white;
+$white--darken: rgb(130,130,130);
+
+$green: #00FF66;
+
+$blue: #00CCFF;
+
+$purple: #FF00FF;
+
+$yellow: yellow;
+
+$red: red;
+$red--light: lighten($red, 30);
+
+// Site Theme
+$body-bg-color: $black;
+
+$modal--overlay: rgba(0,0,0,0.5);
+
+body {
+    color: $white;
+    background-color: $black;
+}
+a {
+  color: $blue;
+}
+a:hover,
+a:focus {
+  color: $blue; // #0085A1
+}
+.row h2,
+.row h3 {
+  color: $white;
+} 
+
+.intro-header .site-heading {
+  color: $white;
+}
+
+.row div,
+.row p,
+.row div,
+.row ul,
+.post-preview > a > .post-subtitle,
+footer .copyright {
+  color: $white;
+}
+
+.intro-header .post-heading h4 {
+  color: $white;
+}
+
+.intro-header .post-heading h1,
+.post-preview > a > .post-title {
+  color: $white;
+}
+
+a,
+.row a,
+.navbar-custom .navbar-brand,
+.navbar-custom .nav li a,
+.post-meta > a {
+  color: $white;
+}
+
+p.post-meta {
+  color: $white;
+}
+
+.site-heading > hr.small, hr {
+  border-color: $white;
+}
+
+.pager .next > a {
+  background-color: $white;
+  color: $black;
+  box-shadow: 0 0 0 1px $white,
+              0 0 0 2px $black,
+              0 0 0 4px $white;
+  transition: all 100ms ease;
+  &:hover {
+    color: $black;
+    border: 0px solid transparent;
+    background-color: $white;
+    box-shadow: 0 0 0 1px $black,
+                0 0 0 2px $white,
+                0 0 0 4px $black;
+  }
+}
+
+.fa-inverse {
+  color: $black;
+}
+.fa-circle {
+  color: $white;
+}
+
+.fa-stack {
+
+}
+input {
+  color: black;
+}
+.btn-site {
+  border: 1px solid black;
+  background-color: $white;
+  &:hover {
+    color: $blue;
+  }
+}
+.editor-container {
+  & input[type="text"], & input[type="password"] {
+    &::placeholder {
+      color: $white--darken;
+    }
+  }
+}
+.btn-editor {
+  border: 1px solid black;
+  background-color: $white;
+}
+.btn-submit {
+  &:hover {
+    color: $green;
+    border: 1px solid $green;
+  }
+}
+.btn-delete {
+  &:hover {
+    color: $red;
+    border: 1px solid $red;
+  }
+}
+.site-heading__about {
+  & a {
+    color: $blue;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+.tag-error {
+  & a {
+    color: $blue;
+    text-decoration: underline;
+    &:hover {
+      color: $blue;
+    }
+  }
+  & input {
+    &::placeholder {
+      color: $white--darken;
+    }
+  }
+}
+.tags-container {
+  & a {
+    color: $blue;
+    &:hover {
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+}
+a.site-link {
+  color: $blue;
+  &:hover {
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+.status-message {
+  border: 1px solid black;
+}
+.status-code {
+  color: $red;
+}
+.error-red {
+  background-color: $red;
+  color: $white;
+}
+@media only screen and (min-width: 768px) {
+  .navbar-custom .navbar-brand:hover,
+  .navbar-custom .navbar-brand:focus,
+  .navbar-custom .nav li a:hover,
+  .navbar-custom .nav li a:focus {
+    color: white;
+    text-decoration: underline;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-custom {
+    background: white;
+    border-bottom: 1px solid black;
+  }
+  .navbar-custom .navbar-brand {
+    color: $black;
+    // padding: 20px;
+  }
+  .navbar-custom .navbar-brand:hover,
+  .navbar-custom .navbar-brand:focus {
+    color: $green;
+  }
+  .navbar-custom .nav li:not(:last-child) {
+    border-bottom: 1px solid $black;
+  }
+  .navbar-custom .nav li a {
+    color: $black;
+    padding: 20px;
+  }
+  .navbar-custom .nav li a:hover,
+  .navbar-custom .nav li a:focus {
+    color: $black;
+  }
+  .navbar-custom .nav li ul.dropdown-menu a {
+    color: $black;
+  }
+  .navbar-custom .nav li ul.dropdown-menu a:hover,
+  .navbar-custom .nav li ul.dropdown-menu a:focus {
+    color: $black;
+  }
+  .navbar-custom .navbar-header .navbar-toggle {
+    color: $black;
+    background-color: $white;
+    border-radius: 0px;
+    border-color: $black;
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: $black;
+  }
+
+  .navbar-fixed-top {
+    transition: all 500ms ease;
+  }
+}
+
+.theme--item {
+    @include flex(center, center, column);
+    text-align: center;
+    & h1 {
+      color: $white;    
+      width: 100%;
+      text-align: right;
+    }
+    form {
+        width: 100%;
+    }
+    button {
+        @include MonoSpace();
+        width: calc(100% - 10px);
+        margin: 15px 0;
+        padding: 10px;
+        color: $black;
+        border: 0px solid transparent;
+        background-color: $white;
+        box-sizing: border-box;
+        transition: all 300ms ease;
+        box-shadow: 0 0 0 5px $white;
+        &:hover {
+            box-shadow: 0 0 0 2px $black,
+                        0 0 0 5px $white;
+        }
+    }
+}
+
+.post--container {
+  & a {
+    color: $blue;
+  }
+}
+
+pre.code--general {
+    background-color: $black;
+    color: $white;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+    @include MonoSpace();
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: normal;
+    font-size: 15px;
+    color: white;
+    text-shadow: none;
+    overflow: scroll;
+}
+pre[class*="language-"],
+:not(pre)>code[class*="language-"] {
+    background: $black;
+}
+pre[class*="language-"] {
+    padding: 15px;
+    border-radius: 0px;
+    // border: 1px solid rgb(140,140,140);
+    overflow: auto;
+}
+
+pre[class*="language-"] {
+    position: relative;
+}
+pre[class*="language-"] code {
+    white-space: pre;
+    display: block;
+}
+
+:not(pre)>code[class*="language-"] {
+    padding: 0.15em 0.2em 0.05em;
+    border-radius: .3em;
+    border: 0.13em solid #7a6652;
+    box-shadow: 1px 1px 0.3em -0.1em #000 inset;
+}
+.token.namespace {
+    opacity: .7;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: $white--darken;
+    font-style: italic;
+}
+.token.operator {
+    color: $purple;
+    // font-weight: bold;
+}
+.token.boolean {
+    color: $blue;
+    font-weight: bold;
+}
+.token.attr-name,
+.token.string {
+    background-color: $yellow;
+    color: $black;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: red;
+}
+.token.selector,
+.token.inserted {
+    color: red;
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.important,
+.token.deleted {
+    color: $purple;
+    font-weight: bold;
+    // font-style: italic;
+}
+.token.regex,
+.token.statement {
+    color: $purple;
+}
+.token.placeholder,
+.token.variable,
+.token.function,
+.token.number {
+    color: $blue;
+}
+.token.important,
+.token.statement,
+.token.bold {
+    font-weight: bold;
+}
+.token.punctuation {
+    color: $green;
+}
+.token.entity {
+    cursor: help;
+}
+.token.italic {
+    font-style: italic;
+}
+
+code.language-markup {
+    color: #f9f9f9;
+}
+code.language-markup .token.tag {
+    color: #ef3b7d;
+}
+code.language-markup .token.attr-name {
+    color: #a6e22d;
+}
+code.language-markup .token.attr-value {
+    color: #e6d06c;
+}
+code.language-markup .token.style,
+code.language-markup .token.script {
+    color: #76d9e6;
+}
+code.language-markup .token.script .token.keyword {
+    color: #76d9e6;
+}
+
+/* Line highlight plugin */
+pre[class*="language-"][data-line] {
+    position: relative;
+    padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin-top: 1em;
+    background: rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+    line-height: inherit;
+    white-space: pre;
+}
+pre[data-line] .line-highlight:before,
+pre[data-line] .line-highlight[data-end]:after {
+    content: attr(data-start);
+    position: absolute;
+    top: .4em;
+    left: .6em;
+    min-width: 1em;
+    padding: 0.2em 0.5em;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: black;
+    font: bold 65%/1 sans-serif;
+    height: 1em;
+    line-height: 1em;
+    text-align: center;
+    border-radius: 999px;
+    text-shadow: none;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+pre[data-line] .line-highlight[data-end]:after {
+    content: attr(data-end);
+    top: auto;
+    bottom: .4em;
+}

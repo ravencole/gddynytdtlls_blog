@@ -1,8 +1,6 @@
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
-  color: $black;
-  background-color: $body-bg-color;
 }
 p {
   line-height: 1.5;
@@ -19,13 +17,6 @@ h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
-}
-a {
-  color: $black;
-}
-a:hover,
-a:focus {
-  color: #0085A1;
 }
 a img:hover,
 a img:focus {

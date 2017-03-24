@@ -13,6 +13,11 @@ class PostPresenter extends Presenter
         $this->post = $post;
     }
 
+    public function url()
+    {
+        return "/post/".$this->post->id;
+    }
+
     public function headerImagePath($defaultPostImage)
     {
         if ($this->post->header_img) {

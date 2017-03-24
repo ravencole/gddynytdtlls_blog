@@ -27,6 +27,9 @@ const ASSETS = {
                 },
                 {
                     src: 'tag-search.js'
+                },
+                {
+                    src: 'jsfuck-syntax-highlighter.js'
                 }
             ]
         },
@@ -36,6 +39,18 @@ const ASSETS = {
             assets: [
                 { 
                     src: 'app.scss' 
+                },
+                {
+                    src: 'theme-dark.scss'
+                },
+                {
+                    src: 'theme-light.scss'
+                },
+                {
+                    src: 'theme-black-on-white.scss'
+                },
+                {
+                    src: 'theme-white-on-black.scss'
                 }
             ]
         }

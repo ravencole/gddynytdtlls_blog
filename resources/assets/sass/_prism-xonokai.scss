@@ -64,8 +64,7 @@ pre[class*="language-"] code {
     color: $purple;
     // font-weight: bold;
 }
-.token.boolean,
-.token.number {
+.token.boolean {
     color: $blue;
     font-weight: bold;
 }
@@ -101,7 +100,8 @@ pre[class*="language-"] code {
 }
 .token.placeholder,
 .token.variable,
-.token.function {
+.token.function,
+.token.number {
     color: $blue;
 }
 .token.important,

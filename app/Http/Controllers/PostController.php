@@ -13,7 +13,10 @@ class PostController extends Controller
     {
         $this->middleware('auth')->only([
             'create',
-            'edit'
+            'edit',
+            'update',
+            'store',
+            'destroy'
         ]);
     }
 

@@ -33,5 +33,7 @@
         </div>
     </div>
 </footer>
-@include('layouts.scripts')
+@include('layouts.scripts',[
+    'additionalScripts' => isset($additionalScripts) ? $additionalScripts : []
+]);
 

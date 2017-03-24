@@ -12,13 +12,14 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
 
+use Illuminate\Support\Facades\Hash;
+
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
+        'password' => Hash::make($faker->password),
         'remember_token' => str_random(10),
     ];
 });
@@ -29,5 +30,11 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'body' => $faker->paragraphs(5,true),
         'post_preview' => $faker->sentence,
         'header_img' => 'http://lorempixel.com/1920/1920/abstract/'
+    ];
+});
+
+$factory->define(App\Tag::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word
     ];
 });
