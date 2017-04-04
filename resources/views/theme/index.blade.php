@@ -22,7 +22,7 @@
                 @foreach(config('view.themes') as $theme)
                     <div class="theme--item">
                         <h1>{{ $theme }}</h1>
-                        <img width="100%" src="/storage/images/theme-{{ $theme }}.png" />
+                        <img width="100%" src="/images/theme-{{ $theme }}.png" />
                         <form method="POST" action="/theme">
                             {{ csrf_field() }}
                             <input type="hidden" name="theme" value="{{ $theme }}" />
