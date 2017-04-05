@@ -340,10 +340,7 @@ pre[class*="language-"] code {
 }
 .token.attr-name,
 .token.string {
-    background-color: $yellow;
-    color: $black;
-    padding: 0 2px;
-    border-radius: 3px;
+    color: $yellow;
 }
 .token.entity,
 .token.url,
