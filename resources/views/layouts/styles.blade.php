@@ -3,5 +3,5 @@
 @if(Cookie::has('theme'))
     <link rel="stylesheet" type="text/css" href="/css/theme-{{ Cookie::get('theme') }}.css">
 @else
-    <link rel="stylesheet" type="text/css" href="/css/theme-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/theme-black-on-white.css">
 @endif

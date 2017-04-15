@@ -15,6 +15,6 @@ class ThemeController extends Controller
 
     public function store(Request $request)
     {
-        return redirect('/theme')->withCookie('theme',$request->theme,120);
+        return redirect('/theme')->withCookie(cookie()->forever('theme',$request->theme));
     }
 }

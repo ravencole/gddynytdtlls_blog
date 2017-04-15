@@ -19,7 +19,7 @@ class ThemeMiddleware
         $response = $next($request);
 
         if (!Cookie::has('theme')) {
-            Cookie::queue('theme','light',120);
+            Cookie::queue(cookie()->forever('theme','black-on-white'));
         }
 
         return $response;
